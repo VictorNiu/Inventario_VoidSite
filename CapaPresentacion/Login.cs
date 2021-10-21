@@ -16,6 +16,8 @@ namespace CapaPresentacion
         public static string nom_usuario;
         public static string tipo_usuario;
         public static string acceso;
+        public static string id_usuario;
+        public static int id_usuario_int;
 
         public Login()
         {
@@ -36,6 +38,8 @@ namespace CapaPresentacion
                         nom_usuario = usuario_valido.Rows[0][3].ToString();
                         tipo_usuario = usuario_valido.Rows[0][2].ToString();
                         acceso = usuario_valido.Rows[0][1].ToString();
+                        id_usuario = usuario_valido.Rows[0][4].ToString();
+                        id_usuario_int = Convert.ToInt32(usuario_valido.Rows[0][4]);
                         MessageBox.Show("Bienvenido " + nom_usuario);
                         this.Hide();
                         mainForm.ShowDialog();

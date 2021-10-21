@@ -19,5 +19,10 @@ namespace CapaNegocio
             tabla = objetoCD.Mostrar();
             return tabla;
         }
+
+        public void RegistrarMovimiento(int id_operacion, int id_usuario, DateTime fecha, int id_inventario, int modificacion)
+        {
+            objetoCD.Registrar(id_operacion, id_usuario, fecha, id_inventario, modificacion);
+        }
     }
 }

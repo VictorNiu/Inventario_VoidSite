@@ -1,0 +1,108 @@
+---CD Conexión---
+SqlDataReader leer;
+DataTable tabla = new DataTable();
+SqlCommand comando = new SqlCommand();
+
+---MOSTRAR---
+        public DataTable Mostrar()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "";
+            comando.CommandType = CommandType.StoredProcedure;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            leer.Close();
+            conexion.CerrarConexion();
+            return tabla;
+        }
+
+---INSERTAR---
+        public void Insertar()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@", );
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+        }
+
+---EDITAR---
+        public void Editar()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@", );
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+        }
+
+---ELIMINAR--
+        public void Eliminar(type var)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@", );
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+        }
+
+---CN_Mostrar---
+        public DataTable Mostrar()
+        {
+            CD_ objetoCD = new CD_;
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.Mostrar();
+            return tabla;
+        }
+
+---CN_Insertar---
+        public void Insertar()
+        {
+            objetoCD.Insertar();
+        }
+
+---CN_Editar---
+        public void Editar()
+        {
+            objetoCD.Editar();
+        }
+
+---CN_Eliminar---
+        public void Eliminar()
+        {
+            objetoCD.Eliminar();
+        }
+
+---BTN-GUARDAR---
+            if(Editar == false)
+            {
+                try
+                {
+                    //objetoCN
+                    MessageBox.Show("PH se insertó correctamente.");
+                    MostrarTablas();
+                    limpiarForm();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al insertar :c \n" + ex);
+                }
+            }
+            if (Editar == true)
+            {
+                try
+                {
+                    //objetoCN
+                    MessageBox.Show("Los datos se modificaron correctamente.");
+                    MostrarTablas();
+                    Editar = false;
+                    limpiarForm();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al editar los datos :c \n" + ex);
+                }
+            }

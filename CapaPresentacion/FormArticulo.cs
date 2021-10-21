@@ -13,6 +13,8 @@ namespace CapaPresentacion
 {
     public partial class FormArticulo : Form
     {
+        public static FormArticulo instance;
+        
         CN_Articulo objetoCN = new CN_Articulo();
         private string idArticulo = null;
         private bool Editar = false;
@@ -24,12 +26,13 @@ namespace CapaPresentacion
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            WindowState = FormWindowState.Maximized; 
             MostrarArticulos();
-            ListarCategorias();
-            cmbCategoria.SelectedIndex = -1;
+            limpiarForm();
         }
 
-        private void ListarCategorias()
+
+        public void ListarCategorias()
         {
             CN_Categoria objeto = new CN_Categoria();
             cmbCategoria.DataSource = objeto.MostrarCategorias();
@@ -95,6 +98,7 @@ namespace CapaPresentacion
             txtArticulo.Clear();
             txtPrecio.Clear();
             cmbCategoria.SelectedIndex = -1;
+            ListarCategorias();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -111,6 +115,17 @@ namespace CapaPresentacion
         }
 
         private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpiarForm_Click(object sender, EventArgs e)
+        {
+            Editar = false;
+            limpiarForm();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -21,13 +21,15 @@ namespace CapaPresentacion
 
         private void FormHistorial_Load(object sender, EventArgs e)
         {
+            WindowState = FormWindowState.Maximized; 
             MostrarHistorial();
         }
 
-        private void MostrarHistorial()
+        public void MostrarHistorial()
         {
             CN_Historial objetoCN = new CN_Historial();
             dataGridView1.DataSource = objetoCN.MostrarHistorial();
+            dataGridView1.Columns[3].DefaultCellStyle.Format = "yyyy/MM/dd - HH:mm:ss";
         }
     }
 }

@@ -28,5 +28,20 @@ namespace CapaNegocio
             tabla = objeto.ListarVariantes(Convert.ToInt32(id_articulo));
             return tabla;
         }
+
+        public void InsertarInventario(int id_articulo, int valor, string cantidad)
+        {
+            objetoCD.Insertar(id_articulo, valor, Convert.ToInt32(cantidad));
+        }
+
+        public void EditarInventario(object id_articulo, object valor, string cantidad, string id_inventario)
+        {
+            objetoCD.Editar(Convert.ToInt32(id_articulo), Convert.ToInt32(valor), Convert.ToInt32(cantidad), Convert.ToInt32(id_inventario));
+        }
+
+        public void EliminarInventario(string id_inventario)
+        {
+            objetoCD.Eliminar(Convert.ToInt32(id_inventario));
+        }
     }
 }

@@ -24,6 +24,7 @@ namespace CapaPresentacion
 
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
+            WindowState = FormWindowState.Maximized; 
             MostrarUsuarios();
         }
 
@@ -122,6 +123,11 @@ namespace CapaPresentacion
         {
             Editar = false;
             limpiarForm();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

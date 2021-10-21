@@ -47,29 +47,31 @@ namespace CapaPresentacion
             // 
             // statusBar
             // 
+            this.statusBar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statUsuario,
             this.statTiempo});
-            this.statusBar.Location = new System.Drawing.Point(0, 428);
+            this.statusBar.Location = new System.Drawing.Point(0, 536);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(800, 22);
+            this.statusBar.Size = new System.Drawing.Size(1074, 24);
             this.statusBar.TabIndex = 0;
             this.statusBar.Text = "statusBar";
             // 
             // statUsuario
             // 
             this.statUsuario.Name = "statUsuario";
-            this.statUsuario.Size = new System.Drawing.Size(23, 17);
+            this.statUsuario.Size = new System.Drawing.Size(28, 19);
             this.statUsuario.Text = "usr";
             // 
             // statTiempo
             // 
             this.statTiempo.Name = "statTiempo";
-            this.statTiempo.Size = new System.Drawing.Size(31, 17);
+            this.statTiempo.Size = new System.Drawing.Size(36, 19);
             this.statTiempo.Text = "time";
             // 
             // menuStrip
             // 
+            this.menuStrip.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemInventario,
             this.menuItemHistorial,
@@ -78,42 +80,42 @@ namespace CapaPresentacion
             this.menuItemUsuarios});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1074, 27);
             this.menuStrip.TabIndex = 2;
             this.menuStrip.Text = "menuStrip";
             // 
             // menuItemInventario
             // 
             this.menuItemInventario.Name = "menuItemInventario";
-            this.menuItemInventario.Size = new System.Drawing.Size(72, 20);
+            this.menuItemInventario.Size = new System.Drawing.Size(83, 23);
             this.menuItemInventario.Text = "Inventario";
             this.menuItemInventario.Click += new System.EventHandler(this.menuItemInventario_Click);
             // 
             // menuItemHistorial
             // 
             this.menuItemHistorial.Name = "menuItemHistorial";
-            this.menuItemHistorial.Size = new System.Drawing.Size(63, 20);
+            this.menuItemHistorial.Size = new System.Drawing.Size(71, 23);
             this.menuItemHistorial.Text = "Historial";
             this.menuItemHistorial.Click += new System.EventHandler(this.menuItemHistorial_Click);
             // 
             // menuItemArticulos
             // 
             this.menuItemArticulos.Name = "menuItemArticulos";
-            this.menuItemArticulos.Size = new System.Drawing.Size(66, 20);
+            this.menuItemArticulos.Size = new System.Drawing.Size(74, 23);
             this.menuItemArticulos.Text = "Artículos";
             this.menuItemArticulos.Click += new System.EventHandler(this.menuItemArticulos_Click);
             // 
             // menuItemCategorias
             // 
             this.menuItemCategorias.Name = "menuItemCategorias";
-            this.menuItemCategorias.Size = new System.Drawing.Size(75, 20);
+            this.menuItemCategorias.Size = new System.Drawing.Size(86, 23);
             this.menuItemCategorias.Text = "Categorías";
             this.menuItemCategorias.Click += new System.EventHandler(this.menuItemCategorias_Click);
             // 
             // menuItemUsuarios
             // 
             this.menuItemUsuarios.Name = "menuItemUsuarios";
-            this.menuItemUsuarios.Size = new System.Drawing.Size(64, 20);
+            this.menuItemUsuarios.Size = new System.Drawing.Size(74, 23);
             this.menuItemUsuarios.Text = "Usuarios";
             this.menuItemUsuarios.Click += new System.EventHandler(this.menuItemUsuarios_Click);
             // 
@@ -125,9 +127,11 @@ namespace CapaPresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1074, 560);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.menuStrip);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
